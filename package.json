@@ -4,7 +4,7 @@
   "description": "deploy to aws s3",
   "main": "index.js",
   "scripts": {
-    "build": "copyfiles -f src/* dist"
+    "build": "copyfiles -f \"src/*\" dist"
   },
   "repository": {
     "type": "git",
