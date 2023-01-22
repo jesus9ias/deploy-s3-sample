@@ -1,6 +1,6 @@
 name: Workflow for S3 Deploy
 on: [push]
-run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+run-name: Deploy to s3 by @${{ github.actor }}
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -17,3 +17,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Build
         run: npm run build
+      - name: print value
+        run: "echo \"$var: {{ secrets.TEST_SECRET }}\""
