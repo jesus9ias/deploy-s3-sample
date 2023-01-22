@@ -27,6 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - uses: actions/checkout@v3
       - name: Deploy
         uses: reggionick/s3-deploy@v3
         with:
