@@ -18,4 +18,4 @@ jobs:
       - name: Build
         run: npm run build
       - name: print value
-        run: "echo \"$var: {{ secrets.TEST_SECRET }}\""
+        run: "echo \"var: ${{ secrets.TEST_SECRET }}\""
