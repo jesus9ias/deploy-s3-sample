@@ -4,7 +4,7 @@
   "description": "deploy to aws s3",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"Test build\""
+    "build": "copyfiles -f src/* dist"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jesus9ias/deploy-s3-sample/issues"
   },
-  "homepage": "https://github.com/jesus9ias/deploy-s3-sample#readme"
+  "homepage": "https://github.com/jesus9ias/deploy-s3-sample#readme",
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
 }
