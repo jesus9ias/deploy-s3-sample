@@ -16,8 +16,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Build
+      - name: s3Deploy
         run: npm install s3-deploy
+      - name: Build
         run: npm run build
       - name: Deploy
         uses: reggionick/s3-deploy@v3
