@@ -4,7 +4,7 @@
   "description": "deploy to aws s3",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"Test build\" && exit 1"
+    "build": "echo \"Test build\""
   },
   "repository": {
     "type": "git",
