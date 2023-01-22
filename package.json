@@ -1,0 +1,19 @@
+{
+  "name": "deploy-s3-sample",
+  "version": "1.0.0",
+  "description": "deploy to aws s3",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Test build\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesus9ias/deploy-s3-sample.git"
+  },
+  "author": "Jesus Escamilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesus9ias/deploy-s3-sample/issues"
+  },
+  "homepage": "https://github.com/jesus9ias/deploy-s3-sample#readme"
+}

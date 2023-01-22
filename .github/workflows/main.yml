@@ -1,3 +1,19 @@
 name: Workflow for S3 Deploy
 on: [push]
 run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x, 16.x]
+    env:
+      TEST_SECRET: ${{ secrets.TEST_SECRET }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Build
+        run: npm run build
